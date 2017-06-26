@@ -187,6 +187,10 @@ class Actions {
     return res;
   }
 
+  pushScene(key, props = {}) {
+    this[key](props);
+  }
+
   popTo(props = {}) {
     return this.callback({ ...filterParam(props), type: ActionConst.POP_TO });
   }
